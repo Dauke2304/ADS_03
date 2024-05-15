@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c4a2a1-988c-4628-a9a3-ea597c7e58ed" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/src/Main/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/BST.java" afterDir="false" />
-    </list>
+    <list default="true" id="49c4a2a1-988c-4628-a9a3-ea597c7e58ed" name="Changes" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715753323765</updated>
       <workItem from="1715753324809" duration="5000" />
-      <workItem from="1715753335803" duration="4957000" />
+      <workItem from="1715753335803" duration="5468000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -130,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715759127311</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1">
+      <option name="closed" value="true" />
+      <created>1715759612539</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715759612539</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
