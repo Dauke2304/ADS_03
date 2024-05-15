@@ -100,7 +100,12 @@ public class MyHashTable<K,V> {
     }
 
     public boolean contains(V value) {
-
+        for(HashNode<K,V> node: chainArray) {
+            if(node.value.equals(value)) {
+                return true;
+            }
+        }
+        return false;
     }
     public K getKey(V value) {
         for(HashNode<K,V> node: chainArray) {
