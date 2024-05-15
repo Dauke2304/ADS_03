@@ -65,16 +65,20 @@ public class MyHashTable<K,V> {
     }
 
     public V get(K key) {
-        int index = hash(key);
-        HashNode<K,V> current = chainArray[index];
+        int index = hash(key);  // Calculate the index for the key in the hash table
+        HashNode<K,V> current = chainArray[index];  // Get the head of the linked list at the calculated index
+
+        // Traverse the linked list to find the node with the matching key
         while (current != null) {
-            if(current.key.equals(key)) {
-                return current.value;
+            if (current.key.equals(key)) {
+                return current.value;  // Return the value if the key is found
             }
-            current = current.next;
+            current = current.next;  // Move to the next node in the linked list
         }
-        return null;
+
+        return null;  // Return null if the key is not found in the hash table
     }
+
     public V remove(K key) {
         int index = hash(key);
         HashNode<K,V> current = chainArray[index];
@@ -82,37 +86,51 @@ public class MyHashTable<K,V> {
 
         while (current != null) {
             if (current.key.equals(key)) {
+                // Check if the node to be removed is the head of the linked list
                 if (previous == null) {
-                    // If the node to be removed is the first node in the chain
+                    // Update the head of the linked list
                     chainArray[index] = current.next;
                 } else {
-                    // If the node to be removed is not the first node
+                    // Skip the current node by updating the previous node's next pointer
                     previous.next = current.next;
                 }
-                size--;
-                return current.value;
+                size--;  // Decrease size since a node is removed
+                return current.value;  // Return the value of the removed node
             }
             previous = current;
             current = current.next;
         }
 
-        return null;
+        return null;  // Key not found, return null
     }
 
+
     public boolean contains(V value) {
-        for(HashNode<K,V> node: chainArray) {
-            if(node.value.equals(value)) {
-                return true;
+
+        for (HashNode<K,V> node : chainArray) {
+            // Traverse the linked list and check if any node's value matches the target value
+            while (node != null) {
+                if (node.value.equals(value)) {
+                    return true; // Return true if the value is found in the hash table
+                }
+                node = node.next; // Move to the next node in the linked list
             }
         }
-        return false;
+        return false; // Return false if the value is not found in the hash table
     }
+
     public K getKey(V value) {
-        for(HashNode<K,V> node: chainArray) {
-            if(node.value.equals(value)) {
-                return node.key;
+
+        for (HashNode<K,V> node : chainArray) {
+            // Traverse the linked list and check if any node's value matches the target value
+            while (node != null) {
+                if (node.value.equals(value)) {
+                    return node.key; // Return the key corresponding to the target value
+                }
+                node = node.next; // Move to the next node in the linked list
             }
         }
-        return null;
+        return null; // Return null if the value is not found in the hash table
     }
+
 }
